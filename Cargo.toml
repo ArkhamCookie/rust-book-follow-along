@@ -13,7 +13,7 @@ members = [
 	"chapter-6/if-let",
 	"chapter-6/match-learning",
 	"chapter-8/hash-maps",
-	"chapter-8/strings", 
+	"chapter-8/strings",
 	"chapter-8/vectors",
 	"chapter-9/errors",
 	"chapter-10/largest",
