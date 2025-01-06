@@ -25,6 +25,7 @@ members = [
 	"chapter-12/minigrep",
 	"chapter-13/closures",
 	"chapter-13/iterators",
-	"chapter-14/crates"
-, "chapter-15"
+	"chapter-14/crates",
+	"chapter-15/box-pointer",
+	"chapter-15/custom-pointers"
 ]
