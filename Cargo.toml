@@ -26,4 +26,5 @@ members = [
 	"chapter-13/closures",
 	"chapter-13/iterators",
 	"chapter-14/crates"
+, "chapter-15"
 ]
