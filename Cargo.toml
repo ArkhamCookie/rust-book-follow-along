@@ -28,5 +28,6 @@ members = [
 	"chapter-14/crates",
 	"chapter-15/box-pointer",
 	"chapter-15/custom-pointers",
+	"chapter-15/refcell",
 	"chapter-15/reference-counting"
 ]
