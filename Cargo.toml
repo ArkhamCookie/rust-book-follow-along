@@ -13,11 +13,11 @@ members = [
 	"chapter-6/if-let",
 	"chapter-6/match-learning",
 	"chapter-8/hash-maps",
-	"chapter-8/strings", 
+	"chapter-8/strings",
 	"chapter-8/vectors",
 	"chapter-9/errors",
-	"chapter-10/largest",
 	"chapter-10/generics",
+	"chapter-10/largest",
 	"chapter-10/traits",
 	"chapter-10/validating-references-with-lifetimes",
 	"chapter-11/adder",
@@ -25,5 +25,10 @@ members = [
 	"chapter-12/minigrep",
 	"chapter-13/closures",
 	"chapter-13/iterators",
-	"chapter-14/crates"
+	"chapter-14/crates",
+	"chapter-15/box-pointer",
+	"chapter-15/custom-pointers",
+	"chapter-15/data-tree",
+	"chapter-15/refcell",
+	"chapter-15/reference-counting"
 ]
