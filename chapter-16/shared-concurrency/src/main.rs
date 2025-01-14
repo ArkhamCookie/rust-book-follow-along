@@ -5,19 +5,19 @@ fn main() {
 	let counter = Arc::new(Mutex::from(0));
 	let mut handles = vec![];
 
-    for _ in 0..10 {
-        let counter = Arc::clone(&counter);
-        let handle = thread::spawn(move || {
-            let mut num = counter.lock().unwrap();
+	for _ in 0..10 {
+		let counter = Arc::clone(&counter);
+		let handle = thread::spawn(move || {
+			let mut num = counter.lock().unwrap();
 
-            *num += 1;
-        });
-        handles.push(handle);
-    }
+			*num += 1;
+		});
+		handles.push(handle);
+	}
 
-    for handle in handles {
-        handle.join().unwrap();
-    }
+	for handle in handles {
+		handle.join().unwrap();
+	}
 
 	println!("Results: {}", *counter.lock().unwrap());
 }

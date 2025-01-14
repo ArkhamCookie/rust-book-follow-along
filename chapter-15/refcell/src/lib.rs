@@ -16,7 +16,7 @@ where
 		LimitTracker {
 			messager,
 			value: 0,
-			max
+			max,
 		}
 	}
 
