@@ -1,5 +1,5 @@
 //! # Crates
-//! 
+//!
 //! `crates` is a collection of utilities random tasks.
 //! This is being used as a way to learn about crates,
 //! and should **not** be uploaded to [crates.io](https://crates.io).
@@ -30,13 +30,13 @@ pub mod utils {
 }
 
 /// Adds one to the number given.
-/// 
+///
 /// # Examples
-/// 
+///
 /// ```
 /// let arg = 5;
 /// let answer = crates::add_one(arg);
-/// 
+///
 /// assert_eq!(6, answer);
 /// ```
 pub fn add_one(x: i32) -> i32 {

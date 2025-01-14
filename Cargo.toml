@@ -30,5 +30,9 @@ members = [
 	"chapter-15/custom-pointers",
 	"chapter-15/data-tree",
 	"chapter-15/refcell",
-	"chapter-15/reference-counting"
+	"chapter-15/reference-counting",
+	"chapter-16/message-between-threads",
+	"chapter-16/move-threads",
+	"chapter-16/shared-concurrency",
+	"chapter-16/spawn-threads"
 ]

@@ -10,7 +10,7 @@ impl Drop for CustomSmartPointer {
 
 fn main() {
 	let c = CustomSmartPointer {
-		data: String::from("some data")
+		data: String::from("some data"),
 	};
 
 	drop(c);
