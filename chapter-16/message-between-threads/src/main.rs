@@ -1,5 +1,5 @@
 use std::sync::mpsc;
-use std::{thread, vec};
+use std::thread;
 use std::time::Duration;
 
 fn main() {
