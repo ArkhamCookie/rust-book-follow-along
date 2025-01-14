@@ -34,5 +34,6 @@ members = [
 	"chapter-16/message-between-threads",
 	"chapter-16/move-threads",
 	"chapter-16/shared-concurrency",
-	"chapter-16/spawn-threads"
+	"chapter-16/spawn-threads",
+	"chapter-17/web-scraper"
 ]
