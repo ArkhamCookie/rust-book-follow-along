@@ -17,11 +17,10 @@ fn main() {
 		let url1 = page_title(&args[1]);
 		let url2 = page_title(&args[2]);
 
-		let (url, maybe_title) =
-			match trpl::race(url1, url2).await {
-				Either::Left(left) => left,
-				Either::Right(right) => right,
-			};
+		let (url, maybe_title) = match trpl::race(url1, url2).await {
+			Either::Left(left) => left,
+			Either::Right(right) => right,
+		};
 
 		println!("{} returned first", url);
 
