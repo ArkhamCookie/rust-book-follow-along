@@ -26,7 +26,6 @@ fn get_intervals() -> impl Stream<Item = u32> {
 fn get_messages() -> impl Stream<Item = String> {
 	let (transmitter, receiver) = trpl::channel();
 
-
 	trpl::spawn_task(async move {
 		let messages = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
 
@@ -48,7 +47,10 @@ fn get_messages() -> impl Stream<Item = String> {
 fn main() {
 	trpl::run(async {
 		let messages = pin!(get_messages().timeout(Duration::from_millis(200)));
-		let intervals = get_intervals().map(|count| format!("Interval: #{}", count)).throttle(Duration::from_millis(100)).timeout(Duration::from_secs(10));
+		let intervals = get_intervals()
+			.map(|count| format!("Interval: #{}", count))
+			.throttle(Duration::from_millis(100))
+			.timeout(Duration::from_secs(10));
 		let merged = messages.merge(intervals).take(20);
 		let mut stream = pin!(merged);
 
