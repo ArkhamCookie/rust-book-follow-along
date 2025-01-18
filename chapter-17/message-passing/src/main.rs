@@ -1,3 +1,5 @@
+use std::future::Future;
+use std::pin::Pin;
 use std::time::Duration;
 
 fn main() {
@@ -19,13 +21,13 @@ fn main() {
 			}
 		};
 
-			let transmitter_future = async move {
-				let values = vec![
-					String::from("more"),
-					String::from("messages"),
-					String::from("for"),
-					String::from("you"),
-				];
+		let transmitter_future = async move {
+			let values = vec![
+				String::from("more"),
+				String::from("messages"),
+				String::from("for"),
+				String::from("you"),
+			];
 
 			for value in values {
 				transmitter.send(value).unwrap();
@@ -39,6 +41,12 @@ fn main() {
 			}
 		};
 
-		trpl::join3(transmitter_future, transmitter1_future, receiver_future).await;
+		let futures: Vec<Pin<Box<dyn Future<Output = ()>>>> = vec![
+			Box::pin(transmitter1_future),
+			Box::pin(transmitter_future),
+			Box::pin(receiver_future),
+		];
+
+		trpl::join_all(futures).await;
 	});
 }
