@@ -42,6 +42,7 @@ members = [
 	"chapter-17/streams",
 	"chapter-17/web-scraper",
 	"chapter-17/yielding",
+	"chapter-18/blog",
 	"chapter-18/characteristics",
 	"chapter-18/gui"
 ]
